@@ -1,0 +1,14 @@
+opam-version: "2.0"
+synopsis: "A brainfuck interpreter written in OCaml"
+maintainer: "Oleksandr Smirnov <olexsmir@gmail.com>"
+authors: ["Oleksandr Smirnov <olexsmir@gmail.com>"]
+homepage: "https://github.com/olexsmir/scratch"
+bug-reports: "https://github.com/olexsmir/scratch/issues"
+dev-repo: "git+https://github.com/olexsmir/scratch.git"
+depends: [
+  "ocaml" {>= "5.0"}
+  "ocamlfind" {build}
+  "alcotest" {with-test}
+]
+build: [ [make "all"] ]
+run-test: [ [make "test"] ]
